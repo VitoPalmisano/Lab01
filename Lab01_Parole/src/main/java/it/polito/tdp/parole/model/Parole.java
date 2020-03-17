@@ -22,5 +22,15 @@ public class Parole {
 	public void reset() {
 		lista.clear();
 	}
+	
+	public void cancella(String s1) {
+		
+		for(ListIterator<String> iteratore = lista.listIterator(); iteratore.hasNext();) {
+			String s2 = iteratore.next();
+			if(s2.compareTo(s1)==0) {
+				iteratore.remove();
+			}
+		}
+	}
 
 }
